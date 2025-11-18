@@ -4,7 +4,7 @@ use std::sync::Arc;
 
 use crate::{
     domain::{
-        repositories::crew_switchboard::CrewSwitchBoardRepository,
+        repositories::crew_switchboard::CrewSwitchboardRepository,
         value_objects::quest_adventurer_junction::QuestAdventurerJunction,
     },
     infrastructure::postgres::postgres_connection::PgPoolSquad,
@@ -21,7 +21,7 @@ impl CrewSwitchBoardPostgres {
 }
 
 #[async_trait]
-impl CrewSwitchBoardRepository for CrewSwitchBoardPostgres {
+impl CrewSwitchboardRepository for CrewSwitchBoardPostgres {
     async fn join(&self, junction_body: QuestAdventurerJunction) -> Result<()> {
         unimplemented!()
     }

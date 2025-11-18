@@ -13,7 +13,7 @@ pub struct JourneyLedgerPostgres {
 }
 
 impl JourneyLedgerPostgres {
-    async fn new(db_pool: Arc<PgPoolSquad>) -> Self {
+    pub fn new(db_pool: Arc<PgPoolSquad>) -> Self {
         Self { db_pool }
     }
 }
